@@ -1,0 +1,106 @@
+:root{
+--primary-color:#ff9e00;
+--secondry-color:#357b70;
+--header-color:#dd3a6c;
+--text-color: #075791;
+--dark-background: #000;
+--pale-background: #07711e;
+--text-background:lightgrey;
+}
+body{
+	margin:0;
+	padding:0;
+}
+.img-box{
+    
+	height:100vh;
+	border:1px solid black;
+	background-image:url('../image/mdyuni.jpg');
+	background-size:cover;
+	overflow:hidden;
+	opacity:;
+}
+.img-box h1{
+	color:var(--primary-color);
+	-webkit-text-stroke:1px var(--dark-background);
+	font-size:5rem;
+	text-shadow:10px 10px 5px var(--dark-background);
+	}
+	.menubar{
+		display:flex;
+		padding:10px;
+		background-color:var(--secondry-color);
+		margin-top:0;
+		opacity:0.5;
+		text-align:center;
+		
+	}
+	.menubar li, .sub-menubar li{
+		
+		list-style-type:none;
+
+	
+	}
+	.sub-menubar li{
+		text-align:left;
+		display:none;
+
+	}
+	.sub-menubar li:hover{
+		background-color:var(--pale-background);
+	}
+
+	.menubar li a{
+		color:white;
+		text-decoration:none;
+		font-size:20px;
+		display:block;
+		border-radius:5px;
+	}
+	.menubar__title{
+		padding:10px;
+		background-color:var(--dark-background);
+		margin-left:50px;
+	}
+	.menubar li:hover .sub-menubar li{
+		display:block;
+	}
+	.additional-informations{
+		position:sticky;
+		top:100%;
+		display:grid;
+		grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+		grid-template-rows:250px;
+		grid-gap:10px;
+		opacity:0.5;
+	}
+	.additional-informations__item{
+		background-color:var(--text-background);
+		padding:10px;
+	}
+	h3{
+		text-align:center;
+	}
+	@media all and (max-width:500px) {
+		.additional-informations{
+			grid-template-columns:1fr;
+			grid-gap:5px;
+		}
+		.additional-informations__item:last-child{
+			grid-column: auto/auto;
+			grid-row: auto/auto;
+		}
+		h3{
+			font-size:16px;
+			color:var(--header-color);
+		}
+	}
+h3{
+	color:var(--header-color);
+}
+p{
+	color:var(--text-color);
+}
+	
+
+	
