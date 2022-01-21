@@ -10,6 +10,7 @@ body{
 	margin:0;
 	padding:0;
 	font-family:'lato',sens-serif;
+	height: 100vh;
 }
 .show-case{
 	position:absolute;
@@ -172,4 +173,124 @@ top:0;
 	align-items: center;
 	justify-content: center;
 	background-color: #357b70;
+}
+.head-bar{
+	position: relative;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 20%;
+	display: flex;
+	text-align: center;
+	align-items: center;
+	justify-content: center;
+	background-color: #075791;
+	text-shadow: 2px 2px #fff;
+}
+footer{
+	position: sticky;
+	top:100%;
+	width: 100%;
+	height: 100px;
+	background-color: #075791;
+	opacity: 0.5;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.contact-info{
+	position: relative;
+	top: 20px;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+	grid-template-rows: 300px;
+	grid-gap: 10px;
+}
+.grid-item{
+	background-color: lightgrey;
+	padding: 10px;
+
+}
+.image{
+	position:relative;
+	left: 20px;
+}
+.contact-info__h4{
+	text-align: center;
+	color: #dd3a6c;
+	font-size: 16px;
+}
+.contact-info p{
+	position: relative;
+	top: -13px;
+	font-size: 14px;
+	color: #1f42a5;
+}
+.footage__item li{
+	display: inline-flex;
+	margin-left: 30px;
+}
+.footage__item li a{
+	color: #fff;
+	text-decoration: none;
+}
+.gym-image{
+	position: relative;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height:100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-image: url('../image/gym.jpg');
+	background-size: cover;
+
+}
+.gym-image::before{
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100vh;
+	background-image:linear-gradient(45deg,#075791, #0cf20e, #f683b6);
+	opacity:0.8;
+
+}
+.gym-greet{
+	width: 200px;
+	height: 200px;
+	background-color: #0cf20e;
+	color: #f683b6;
+	z-index: 1;
+	display: block;
+	text-align: center;
+	font-size: 1.5rem;
+	padding: 10px;
+	border-radius: 50%;
+}
+@keyframes image-out{
+	0%{
+		transform: scale(0);
+	}
+	100%{
+		transform: scale(1);
+	}
+}
+.gym-greet{
+	animation-name: image-out;
+	animation-duration: 4s;
+	animation-iteration-count: infinite;
+}
+@media all and (max-width: 500px) {
+	.contact-info{
+		grid-template-columns: 1fr;
+		grid-gap: 5px;
+	}
+	.grid-item:last-child{
+		grid-column: auto/auto;
+		grid-row: auto/auto;
+	}
+
 }
